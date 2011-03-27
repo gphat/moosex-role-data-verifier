@@ -8,26 +8,26 @@ use Moose::Role;
 
 =head1 SYNOPSIS
 
-  package TestClass;
-  use Moose;
+    package TestClass;
+    use Moose;
   
-  with 'MooseX::Role::Data::Verifier';
+    with 'MooseX::Role::Data::Verifier';
 
-  has 'name' => (
-    is => 'rw',
-    isa => 'Str',
-    required => 1
-  );
+    has 'name' => (
+        is => 'rw',
+        isa => 'Str',
+        required => 1
+    );
   
-  # ... elsewhere
+    # ... elsewhere
   
-  my $tc = TestClass->new;
+    my $tc = TestClass->new;
   
-  my $dv = Data::Verifier->new(
-    profile => $tc->get_verifier_profile
-  );
+    my $dv = Data::Verifier->new(
+        profile => $tc->get_verifier_profile
+    );
   
-  $dv->verify(...); # Verify!
+    $dv->verify(...); # Verify!
   
 =head1 DESCRIPTION
 
