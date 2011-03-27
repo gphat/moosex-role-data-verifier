@@ -1,4 +1,5 @@
 use Test::More;
+use lib qw('t/lib');
 
 use DVTest;
 
